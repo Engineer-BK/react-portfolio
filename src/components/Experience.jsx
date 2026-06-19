@@ -67,6 +67,13 @@ const Experience = () => {
       bgClass: "bg-[url('./assets/thesylhetiarchive.png')]"
     },
     {
+      title: "Admission Management",
+      tech: "Next.js 16 • React 19 • Tailwind CSS • Prisma • Recharts",
+      link: "https://admission-crm-vercel-live.vercel.app/",
+      category: "Freelance",
+      bgClass: "bg-[url('./assets/admission-app.png')]"
+    },
+    {
       title: "PathPlus (OTT Platform)",
       tech: "React.js • React Native • Web/Mobile • Rest API",
       link: "#",
