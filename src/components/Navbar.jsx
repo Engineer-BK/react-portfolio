@@ -138,11 +138,12 @@ const Navbar = () => {
             <a href="#about">About me</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
           </li>
           <li>
-            <a href="#work">My Work</a>
+            <a href="#services">Services</a>
           </li>
+
           <li>
             <a href="#contact">Contact me</a>
           </li>
@@ -202,15 +203,16 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+            <a href="#experience" onClick={closeMenu}>
+              Experience
+            </a>
+          </li>
+          <li>
             <a href="#services" onClick={closeMenu}>
               Services
             </a>
           </li>
-          <li>
-            <a href="#work" onClick={closeMenu}>
-              My Work
-            </a>
-          </li>
+
           <li>
             <a href="#contact" onClick={closeMenu}>
               Contact me

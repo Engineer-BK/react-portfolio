@@ -8,10 +8,12 @@ Welcome to my personal portfolio codebase! This is a modern, responsive, and hig
 
 - 📱 **iOS-Style Glassmorphism**: Transparent, blurred navigation bar that matches Apple's design language in both dark and light modes.
 - 🌙 **Adaptive Dark Mode**: Quick theme toggle with local storage persistence to remember the user's preference.
+- 💼 **Consolidated Career Journey**: Unified section (`Work & Freelancing`) displaying professional roles, freelance achievements, and personal projects in one clean timeline.
+- 🛠️ **Collapsible Projects Grid**: Displays your top 3 personal projects by default, with an interactive "Show More" / "Show Less" toggle to view other items.
+- ⚙️ **Refructured Skill Profiles**: Structured skill cards in the About section divided cleanly into **Languages**, **Databases**, and **Frameworks & Tools**.
 - 📄 **Latest Resume Download**: Directly download the most recent CV (`Bachir_Khan_MERN_Developer_1Year_US_project_19-06-2026.pdf`) from the header.
-- ✉️ **Interactive Contact**: Interactive click-to-copy email chip with dynamic tooltip feedback ("Click to copy" ➔ "Copied!").
+- ✉️ **Interactive Contact**: Interactive click-to-copy email chip in the footer with dynamic tooltip feedback ("Click to copy" ➔ "Copied!").
 - ⚡ **Lightning Fast**: Built on Vite for near-instantaneous Hot Module Replacement (HMR) and optimized build chunks.
-- 🎨 **Premium Aesthetics**: Styled with Tailwind CSS, custom gradients, Outfit & Ovo typography, and responsive grid layouts.
 
 ---
 
@@ -22,7 +24,7 @@ Welcome to my personal portfolio codebase! This is a modern, responsive, and hig
 | **Frontend** | React 18, HTML5, Tailwind CSS |
 | **Build Tool** | Vite, PostCSS, Autoprefixer |
 | **Fonts** | Google Fonts (Outfit, Ovo) |
-| **Icons** | Custom icons (assets directory) |
+| **Icons** | Custom icons & inline SVGs |
 
 ---
 
@@ -33,14 +35,14 @@ Welcome to my personal portfolio codebase! This is a modern, responsive, and hig
 ├── src/
 │   ├── assets/             # Images, SVGs, and icon resources
 │   ├── components/
-│   │   ├── About.jsx       # Personal biography and skills showcase
+│   │   ├── About.jsx       # Personal biography, categorized skills, and education
 │   │   ├── Contact.jsx     # Contact form component
-│   │   ├── Footer.jsx      # Clean footer with GitHub & LinkedIn links
+│   │   ├── Experience.jsx  # Career timeline featuring LeviSoft, Sylheti Archive, and personal projects
+│   │   ├── Footer.jsx      # Clean footer with GitHub & LinkedIn links (copy email button)
 │   │   ├── Header.jsx      # Hero section with avatar and CV download button
-│   │   ├── Navbar.jsx      # Dynamic sticky navbar with theme switcher
-│   │   ├── Services.jsx    # Offerings (Web Dev, Mobile App, UI/UX, etc.)
-│   │   └── Work.jsx        # Project showcases & portfolio grid
-│   ├── App.jsx             # Main application entry point
+│   │   ├── Navbar.jsx      # Dynamic sticky navbar with theme switcher and scroll blur effects
+│   │   └── Services.jsx    # Offerings (Web Dev, Mobile App, UI/UX, etc.)
+│   ├── App.jsx             # Main application layout and routing
 │   ├── index.css           # Global Tailwind directives
 │   └── main.jsx            # React DOM mounting code
 ├── package.json            # Scripts & dependencies
