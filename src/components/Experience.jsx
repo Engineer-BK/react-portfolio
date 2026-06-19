@@ -64,7 +64,7 @@ const Experience = () => {
       tech: "Next.js 15 • React 19 • PostgreSQL • Prisma • Redis • Tailwind",
       link: "https://github.com/Engineer-BK",
       category: "Freelance",
-      bgClass: "bg-[url('./assets/work-4.png')]"
+      bgClass: "bg-[url('./assets/work-5.png')]"
     },
     {
       title: "Ecommerce Hub",
