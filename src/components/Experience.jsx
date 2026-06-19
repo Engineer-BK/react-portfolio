@@ -43,49 +43,49 @@ const Experience = () => {
       tech: "Next.js • Node.js • Groq AI • AWS • PostgreSQL • Redis",
       link: "https://syncup-ai-job-platform.vercel.app/",
       category: "Personal",
-      bgClass: "bg-[url('./assets/work-1.png')]"
+      bgClass: "bg-[url('./assets/syncup.png')]"
     },
     {
       title: "Real-Time Chat App",
       tech: "React • Node.js • Microservices • Socket.IO • AWS • Docker",
       link: "https://chatfrontend-v2.vercel.app/",
       category: "Personal",
-      bgClass: "bg-[url('./assets/work-2.png')]"
+      bgClass: "bg-[url('./assets/chatapp.png')]"
     },
     {
       title: "PathPlus (OTT Platform)",
       tech: "React.js • React Native • Web/Mobile • Rest API",
       link: "https://github.com/Engineer-BK",
       category: "Work",
-      bgClass: "bg-[url('./assets/work-3.png')]"
+      bgClass: "bg-[url('./assets/pathplus.png')]"
     },
     {
       title: "The Sylheti Archive",
       tech: "Next.js 15 • React 19 • PostgreSQL • Prisma • Redis • Tailwind",
       link: "https://github.com/Engineer-BK",
       category: "Freelance",
-      bgClass: "bg-[url('./assets/work-5.png')]"
+      bgClass: "bg-[url('./assets/thesylhetiarchive.png')]"
     },
     {
       title: "Ecommerce Hub",
       tech: "React • Node.js • Express • MongoDB • Tailwind",
       link: "https://ecommerce-frontend-8v2v.onrender.com/",
       category: "Personal",
-      bgClass: "bg-[url('./assets/work-2.png')]"
+      bgClass: "bg-[url('./assets/ecommerce.png')]"
     },
     {
       title: "RecipeHub (React)",
       tech: "React • Tailwind CSS • REST API • Responsive",
       link: "https://engineer-bk.github.io/RecipeHub/",
       category: "Personal",
-      bgClass: "bg-[url('./assets/work-6.png')]"
+      bgClass: "bg-[url('./assets/recipehub.png')]"
     },
     {
       title: "Crypto Price Tracker",
       tech: "React • Chart.js • Crypto API • Dashboard",
       link: "https://crypto-tracker-link.com",
       category: "Personal",
-      bgClass: "bg-[url('./assets/work-4.png')]"
+      bgClass: "bg-[url('./assets/default-project.png')]"
     }
   ];
 
