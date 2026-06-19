@@ -53,6 +53,20 @@ const Experience = () => {
       bgClass: "bg-[url('./assets/chatapp.png')]"
     },
     {
+      title: "RecipeHub (React)",
+      tech: "React • Tailwind CSS • REST API • Responsive",
+      link: "https://engineer-bk.github.io/RecipeHub/",
+      category: "Personal",
+      bgClass: "bg-[url('./assets/recipehub.png')]"
+    },
+    {
+      title: "The Sylheti Archive",
+      tech: "Next.js 15 • React 19 • PostgreSQL • Prisma • Redis • Tailwind",
+      link: "https://the-siloti-archive-git-sarcc-991861-thesylotiarchives-projects.vercel.app/",
+      category: "Freelance",
+      bgClass: "bg-[url('./assets/thesylhetiarchive.png')]"
+    },
+    {
       title: "PathPlus (OTT Platform)",
       tech: "React.js • React Native • Web/Mobile • Rest API",
       link: "https://github.com/Engineer-BK",
@@ -60,25 +74,11 @@ const Experience = () => {
       bgClass: "bg-[url('./assets/pathplus.png')]"
     },
     {
-      title: "The Sylheti Archive",
-      tech: "Next.js 15 • React 19 • PostgreSQL • Prisma • Redis • Tailwind",
-      link: "https://github.com/Engineer-BK",
-      category: "Freelance",
-      bgClass: "bg-[url('./assets/thesylhetiarchive.png')]"
-    },
-    {
       title: "Ecommerce Hub",
       tech: "React • Node.js • Express • MongoDB • Tailwind",
       link: "https://ecommerce-frontend-8v2v.onrender.com/",
       category: "Personal",
       bgClass: "bg-[url('./assets/ecommerce.png')]"
-    },
-    {
-      title: "RecipeHub (React)",
-      tech: "React • Tailwind CSS • REST API • Responsive",
-      link: "https://engineer-bk.github.io/RecipeHub/",
-      category: "Personal",
-      bgClass: "bg-[url('./assets/recipehub.png')]"
     },
     {
       title: "Crypto Price Tracker",
