@@ -8,9 +8,9 @@ Welcome to my personal portfolio codebase! This is a modern, responsive, and hig
 
 - 📱 **iOS-Style Glassmorphism**: Transparent, blurred navigation bar that matches Apple's design language in both dark and light modes.
 - 🌙 **Adaptive Dark Mode**: Quick theme toggle with local storage persistence to remember the user's preference.
-- 💼 **Consolidated Career Journey**: Unified section (`Work & Freelancing`) displaying professional roles, freelance achievements, and personal projects in one clean timeline.
-- 🛠️ **Collapsible Projects Grid**: Displays your top 3 personal projects by default, with an interactive "Show More" / "Show Less" toggle to view other items.
-- ⚙️ **Refructured Skill Profiles**: Structured skill cards in the About section divided cleanly into **Languages**, **Databases**, and **Frameworks & Tools**.
+- 💼 **Consolidated Career Journey**: Unified section (`Work & Freelancing`) displaying professional experience, freelance projects, and personal projects in one clean timeline.
+- 🛠️ **All Projects Filtering Tabs**: Renamed the projects grid to *All Projects(Personal, Work & Free Launching)* with interactive category filter tabs (All, Work, Freelance, Personal) and a collapsible "Show More" grid.
+- ⚙️ **Refactored Skill Profiles**: Structured skill cards in the About section divided cleanly into **Languages**, **Databases**, and **Frameworks & Tools**.
 - 📄 **Latest Resume Download**: Directly download the most recent CV (`Bachir_Khan_MERN_Developer_1Year_US_project_19-06-2026.pdf`) from the header.
 - ✉️ **Interactive Contact**: Interactive click-to-copy email chip in the footer with dynamic tooltip feedback ("Click to copy" ➔ "Copied!").
 - ⚡ **Lightning Fast**: Built on Vite for near-instantaneous Hot Module Replacement (HMR) and optimized build chunks.
