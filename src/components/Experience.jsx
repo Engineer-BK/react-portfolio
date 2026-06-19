@@ -46,7 +46,7 @@ const Experience = () => {
     {
       title: "Real-Time Chat App",
       tech: "MERN • Microservices • AWS",
-      link: "https://github.com/Engineer-BK",
+      link: "https://chatfrontend-v2.vercel.app/",
       bgClass: "bg-[url('./assets/work-2.png')]"
     },
     {
