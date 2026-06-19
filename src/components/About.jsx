@@ -11,11 +11,8 @@ import edu_icon_dark from "../assets/edu-icon-dark.png";
 import project_icon from "../assets/project-icon.png";
 import project_icon_dark from "../assets/project-icon-dark.png";
 import vscode from "../assets/vscode.png";
-// import firebase from "../assets/firebase.png";
 import node from "../assets/node.png";
 import postman from "../assets/postman-icon.png";
-// import react from "../assets/react.png";
-
 import figma from "../assets/figma.png";
 import docker from "../assets/docker-logo.png";
 import git from "../assets/git.png";

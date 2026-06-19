@@ -35,15 +35,19 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (scrollY > 50) {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
         navRef.current.classList.add(
           "bg-white",
-          "bg-opacity-50",
-          "backdrop-blur-lg",
-          "shadow-sm",
+          "bg-opacity-70",
+          "backdrop-blur-md",
+          "shadow-[0_2px_20px_rgba(0,0,0,0.04)]",
+          "border-b",
+          "border-white/30",
           "dark:bg-darkTheme",
-          "dark:shadow-white/20"
+          "dark:bg-opacity-70",
+          "dark:border-white/10",
+          "dark:shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
         );
         navLinkRef.current.classList.remove(
           "bg-white",
@@ -56,11 +60,15 @@ const Navbar = () => {
       } else {
         navRef.current.classList.remove(
           "bg-white",
-          "bg-opacity-50",
-          "backdrop-blur-lg",
-          "shadow-sm",
+          "bg-opacity-70",
+          "backdrop-blur-md",
+          "shadow-[0_2px_20px_rgba(0,0,0,0.04)]",
+          "border-b",
+          "border-white/30",
           "dark:bg-darkTheme",
-          "dark:shadow-white/20"
+          "dark:bg-opacity-70",
+          "dark:border-white/10",
+          "dark:shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
         );
         navLinkRef.current.classList.add(
           "bg-white",
@@ -71,7 +79,10 @@ const Navbar = () => {
           "dark:bg-transparent"
         );
       }
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     // -------- light mode and dark mode -----------
 
@@ -84,6 +95,10 @@ const Navbar = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -97,7 +112,7 @@ const Navbar = () => {
 
       <nav
         ref={navRef}
-        className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50"
+        className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-300"
       >
         <img
           src={logo2}
