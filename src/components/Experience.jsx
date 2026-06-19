@@ -92,7 +92,7 @@ const Experience = () => {
     }
   ];
 
-  const tabs = ["All", "Work", "Freelance", "Personal"];
+  const tabs = ["All", "Personal", "Work", "Freelance"];
 
   const filteredProjects = personalProjects.filter((proj) => {
     if (activeTab === "All") return true;
