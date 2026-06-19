@@ -69,23 +69,26 @@ const Experience = () => {
     {
       title: "PathPlus (OTT Platform)",
       tech: "React.js • React Native • Web/Mobile • Rest API",
-      link: "https://github.com/Engineer-BK",
+      link: "#",
       category: "Work",
-      bgClass: "bg-[url('./assets/pathplus.png')]"
+      bgClass: "bg-[url('./assets/pathplus.png')]",
+      noLink: true
     },
     {
       title: "Ecommerce Hub",
       tech: "React • Node.js • Express • MongoDB • Tailwind",
-      link: "https://ecommerce-frontend-8v2v.onrender.com/",
+      link: "#",
       category: "Personal",
-      bgClass: "bg-[url('./assets/ecommerce.png')]"
+      bgClass: "bg-[url('./assets/ecommerce.png')]",
+      devInProgress: true
     },
     {
       title: "Crypto Price Tracker",
       tech: "React • Chart.js • Crypto API • Dashboard",
-      link: "https://crypto-tracker-link.com",
+      link: "#",
       category: "Personal",
-      bgClass: "bg-[url('./assets/default-project.png')]"
+      bgClass: "bg-[url('./assets/default-project.png')]",
+      devInProgress: true
     }
   ];
 
@@ -235,80 +238,129 @@ const Experience = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {displayedProjects.map((proj, idx) => {
                 const tags = proj.tech.split(/•|·|\*/).map(t => t.trim()).filter(Boolean);
+                
                 let displayUrl = 'project.live';
-                try {
-                  displayUrl = new URL(proj.link).hostname;
-                } catch (_) {}
+                if (proj.noLink) {
+                  displayUrl = 'offline';
+                } else if (proj.devInProgress) {
+                  displayUrl = 'localhost:3000';
+                } else {
+                  try {
+                    displayUrl = new URL(proj.link).hostname;
+                  } catch (_) {}
+                }
 
-                return (
-                  <a
-                    key={idx}
-                    href={proj.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block animate-fadeIn"
-                  >
-                    <div className="overflow-hidden border border-gray-200/80 dark:border-zinc-800/80 rounded-2xl bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md transition-all duration-500 hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-white/5 hover:border-[#b820e6]/30 dark:hover:border-[#da7d20]/30 flex flex-col h-full">
-                      {/* Browser Mockup Header */}
-                      <div className="px-4 py-2.5 bg-gray-50/80 dark:bg-zinc-950/80 border-b border-gray-200/50 dark:border-zinc-900/80 flex items-center justify-between">
-                        <div className="flex items-center gap-1.5">
-                          <span className="w-2 h-2 rounded-full bg-red-400"></span>
-                          <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
-                          <span className="w-2 h-2 rounded-full bg-green-400"></span>
-                        </div>
-                        <span className="text-[10px] text-gray-400 dark:text-zinc-500 font-Outfit">
-                          {displayUrl}
-                        </span>
-                        <div className="w-8"></div>
+                const isClickable = !proj.noLink && !proj.devInProgress;
+
+                const CardInner = (
+                  <div className={`overflow-hidden border border-gray-200/80 dark:border-zinc-800/80 rounded-2xl bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md transition-all duration-500 flex flex-col h-full ${
+                    isClickable 
+                      ? "hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-white/5 hover:border-[#b820e6]/30 dark:hover:border-[#da7d20]/30" 
+                      : "border-gray-200/50 dark:border-zinc-800/50"
+                  }`}>
+                    {/* Browser Mockup Header */}
+                    <div className="px-4 py-2.5 bg-gray-50/80 dark:bg-zinc-950/80 border-b border-gray-200/50 dark:border-zinc-900/80 flex items-center justify-between">
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-red-400"></span>
+                        <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
+                        <span className="w-2 h-2 rounded-full bg-green-400"></span>
                       </div>
+                      <span className="text-[10px] text-gray-400 dark:text-zinc-500 font-Outfit">
+                        {displayUrl}
+                      </span>
+                      <div className="w-8"></div>
+                    </div>
 
-                      {/* Image Preview Container */}
-                      <div className="h-44 sm:h-48 overflow-hidden relative bg-gray-100 dark:bg-zinc-950 flex items-center justify-center p-3">
-                        <div 
-                          className={`w-full h-full bg-no-repeat bg-cover bg-center rounded-lg shadow-sm border border-gray-200/40 dark:border-zinc-800/50 transition-all duration-700 group-hover:scale-[1.03] group-hover:-translate-y-0.5 ${proj.bgClass}`}
-                        ></div>
-                      </div>
+                    {/* Image Preview Container */}
+                    <div className="h-44 sm:h-48 overflow-hidden relative bg-gray-100 dark:bg-zinc-950 flex items-center justify-center p-3">
+                      <div 
+                        className={`w-full h-full bg-no-repeat bg-cover bg-center rounded-lg shadow-sm border border-gray-200/40 dark:border-zinc-800/50 transition-all duration-700 ${
+                          isClickable ? "group-hover:scale-[1.03] group-hover:-translate-y-0.5" : ""
+                        } ${proj.bgClass}`}
+                      ></div>
+                    </div>
 
-                      {/* Info & Content */}
-                      <div className="p-5 flex flex-col justify-between flex-1 gap-4">
-                        <div>
-                          <div className="flex items-start justify-between gap-2">
-                            <h4 className="font-semibold text-base text-gray-950 dark:text-white font-Outfit group-hover:text-[#b820e6] dark:group-hover:text-[#da7d20] transition-colors duration-300">
-                              {proj.title}
-                            </h4>
-                            <span className="shrink-0 px-2 py-0.5 text-[8px] font-bold uppercase tracking-wider bg-gray-100 dark:bg-zinc-800 text-gray-500 dark:text-zinc-400 rounded border border-gray-200/40 dark:border-zinc-700/40">
-                              {proj.category}
-                            </span>
-                          </div>
-                          
-                          {/* Modern Pill Tags */}
-                          <div className="flex flex-wrap gap-1.5 mt-3">
-                            {tags.map((tag, tIdx) => (
-                              <span 
-                                key={tIdx} 
-                                className="px-2.5 py-0.5 text-[10px] font-semibold bg-gray-100 dark:bg-zinc-800/80 text-gray-600 dark:text-zinc-300 rounded-full font-Outfit border border-gray-200/20 dark:border-zinc-700/20"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Minimalist Link Trigger */}
-                        <div className="flex items-center justify-between border-t border-gray-100 dark:border-zinc-800/80 pt-3 mt-1">
-                          <span className="text-xs text-gray-500 dark:text-zinc-400 font-Outfit group-hover:text-[#b820e6] dark:group-hover:text-[#da7d20] transition-colors duration-300 flex items-center gap-1">
-                            Visit Site 
+                    {/* Info & Content */}
+                    <div className="p-5 flex flex-col justify-between flex-1 gap-4">
+                      <div>
+                        <div className="flex items-start justify-between gap-2">
+                          <h4 className={`font-semibold text-base text-gray-950 dark:text-white font-Outfit transition-colors duration-300 ${
+                            isClickable ? "group-hover:text-[#b820e6] dark:group-hover:text-[#da7d20]" : ""
+                          }`}>
+                            {proj.title}
+                          </h4>
+                          <span className="shrink-0 px-2 py-0.5 text-[8px] font-bold uppercase tracking-wider bg-gray-100 dark:bg-zinc-800 text-gray-500 dark:text-zinc-400 rounded border border-gray-200/40 dark:border-zinc-700/40">
+                            {proj.category}
                           </span>
-                          <div className="w-8 h-8 rounded-full border border-gray-200 dark:border-zinc-800 flex items-center justify-center text-gray-600 dark:text-zinc-400 group-hover:bg-[#b820e6] dark:group-hover:bg-[#da7d20] group-hover:text-white group-hover:border-transparent transition-all duration-300">
-                            <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                          </div>
                         </div>
+                        
+                        {/* Modern Pill Tags */}
+                        <div className="flex flex-wrap gap-1.5 mt-3">
+                          {tags.map((tag, tIdx) => (
+                            <span 
+                              key={tIdx} 
+                              className="px-2.5 py-0.5 text-[10px] font-semibold bg-gray-100 dark:bg-zinc-800/80 text-gray-600 dark:text-zinc-300 rounded-full font-Outfit border border-gray-200/20 dark:border-zinc-700/20"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Minimalist Link Trigger */}
+                      <div className="flex items-center justify-between border-t border-gray-100 dark:border-zinc-800/80 pt-3 mt-1 font-Outfit">
+                        {proj.noLink ? (
+                          <div className="flex items-center gap-1.5 text-red-500 dark:text-red-400 text-xs font-semibold tracking-wide py-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-red-500 dark:bg-red-400"></span>
+                            There is no link
+                          </div>
+                        ) : proj.devInProgress ? (
+                          <div className="flex items-center gap-1.5 text-red-500 dark:text-red-400 text-xs font-semibold tracking-wide py-1">
+                            <span className="flex h-1.5 w-1.5 relative">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500 dark:bg-red-400"></span>
+                            </span>
+                            Development in progress...
+                          </div>
+                        ) : (
+                          <>
+                            <span className="text-xs text-gray-500 dark:text-zinc-400 group-hover:text-[#b820e6] dark:group-hover:text-[#da7d20] transition-colors duration-300 flex items-center gap-1">
+                              Visit Site 
+                            </span>
+                            <div className="w-8 h-8 rounded-full border border-gray-200 dark:border-zinc-800 flex items-center justify-center text-gray-600 dark:text-zinc-400 group-hover:bg-[#b820e6] dark:group-hover:bg-[#da7d20] group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                              <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                              </svg>
+                            </div>
+                          </>
+                        )}
                       </div>
                     </div>
-                  </a>
+                  </div>
                 );
+
+                if (isClickable) {
+                  return (
+                    <a
+                      key={idx}
+                      href={proj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block animate-fadeIn"
+                    >
+                      {CardInner}
+                    </a>
+                  );
+                } else {
+                  return (
+                    <div
+                      key={idx}
+                      className="group block animate-fadeIn"
+                    >
+                      {CardInner}
+                    </div>
+                  );
+                }
               })}
             </div>
 
