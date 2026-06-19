@@ -78,7 +78,7 @@ const Experience = () => {
       tech: "React • Tailwind CSS • REST API • Responsive",
       link: "https://engineer-bk.github.io/RecipeHub/",
       category: "Personal",
-      bgClass: "bg-[url('./assets/work-1.png')]"
+      bgClass: "bg-[url('./assets/work-6.png')]"
     },
     {
       title: "Crypto Price Tracker",
