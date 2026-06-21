@@ -70,7 +70,7 @@ const Experience = () => {
       title: "Admission Management",
       tech: "Next.js 16 • React 19 • Tailwind CSS • Prisma • Recharts",
       link: "https://admission-crm-vercel-live.vercel.app/",
-      category: "Freelance",
+      category: "Personal",
       bgClass: "bg-[url('./assets/admission-app.png')]"
     },
     {
@@ -109,19 +109,19 @@ const Experience = () => {
   const displayedProjects = showAllProjects ? filteredProjects : filteredProjects.slice(0, 4);
 
   return (
-    <div id="experience" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div id="experience" className="w-full px-[12%] py-8 sm:py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-Ovo">My Career Journey</h4>
-      <h2 className="text-center text-5xl font-Ovo mb-16">Work & Freelancing</h2>
+      <h2 className="text-center text-5xl font-Ovo mb-10">Work & Freelancing</h2>
 
-      <div className="max-w-3xl mx-auto flex flex-col gap-12">
+      <div className="max-w-3xl mx-auto flex flex-col gap-8">
         {/* Section 1: Professional Experience */}
         <div>
-          <h3 className="text-2xl font-Ovo mb-6 text-gray-800 dark:text-white border-b border-gray-200 dark:border-zinc-800 pb-2 flex items-center gap-2">
+          <h3 className="text-2xl font-Ovo mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-zinc-800 pb-2 flex items-center gap-2">
             💼 Professional Experience
           </h3>
           <div className="relative border-l-2 border-gray-200 dark:border-zinc-800 pl-8 ml-4">
             {professionalExperience.map((exp, idx) => (
-              <div key={idx} className="relative mb-6 group">
+              <div key={idx} className="relative mb-4 group">
                 {/* Timeline Dot */}
                 <div className="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-white dark:bg-darkTheme border-4 border-[#b820e6] dark:border-[#da7d20] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#b820e6] dark:bg-[#da7d20]"></span>
@@ -166,12 +166,12 @@ const Experience = () => {
 
         {/* Section 2: Freelance Projects */}
         <div>
-          <h3 className="text-2xl font-Ovo mb-6 text-gray-800 dark:text-white border-b border-gray-200 dark:border-zinc-800 pb-2 flex items-center gap-2">
+          <h3 className="text-2xl font-Ovo mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-zinc-800 pb-2 flex items-center gap-2">
             🚀 Freelance Projects
           </h3>
           <div className="relative border-l-2 border-gray-200 dark:border-zinc-800 pl-8 ml-4">
             {freelanceProjects.map((proj, idx) => (
-              <div key={idx} className="relative mb-6 group">
+              <div key={idx} className="relative mb-4 group">
                 {/* Timeline Dot */}
                 <div className="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-white dark:bg-darkTheme border-4 border-[#b820e6] dark:border-[#da7d20] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#b820e6] dark:bg-[#da7d20]"></span>
@@ -213,7 +213,7 @@ const Experience = () => {
 
         {/* Section 3: All Projects(Personal, Work & Free Launching) */}
         <div>
-          <h3 className="text-2xl font-Ovo mb-6 text-gray-800 dark:text-white border-b border-gray-200 dark:border-zinc-800 pb-2 flex items-center gap-2">
+          <h3 className="text-2xl font-Ovo mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-zinc-800 pb-2 flex items-center gap-2">
             📂 All Projects(Personal, Work & Free Launching)
           </h3>
           <div className="relative border-l-2 border-gray-200 dark:border-zinc-800 pl-8 ml-4">
@@ -222,7 +222,7 @@ const Experience = () => {
             </div>
 
             {/* Subsection Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-2 mb-8 font-Outfit">
+            <div className="flex flex-wrap items-center gap-2 mb-5 font-Outfit">
               {tabs.map((tab) => (
                 <button
                   key={tab}

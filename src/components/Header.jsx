@@ -6,7 +6,7 @@ import resume from "/Bachir_Khan_MERN_Developer_1Year_US_project_19-06-2026.pdf"
 
 const Header = () => {
   return (
-    <div className="w-11/12 max-w-4xl text-center mx-auto min-h-screen pt-24 pb-12 flex flex-col items-center justify-center gap-6 relative select-none">
+    <div className="w-11/12 max-w-4xl text-center mx-auto min-h-[75vh] sm:min-h-[80vh] pt-24 pb-8 flex flex-col items-center justify-center gap-6 relative select-none">
       {/* Decorative background glows */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-gradient-to-tr from-[#b820e6]/10 to-[#da7d20]/10 rounded-full blur-3xl -z-10 animate-pulse duration-[6000ms]"></div>
       

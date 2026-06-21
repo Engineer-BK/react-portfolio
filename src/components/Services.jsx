@@ -33,13 +33,13 @@ const Services = () => {
   ];
 
   return (
-    <div id="services" className="w-full px-[8%] sm:px-[12%] py-16 sm:py-24 scroll-mt-20 relative select-none overflow-hidden">
+    <div id="services" className="w-full px-[8%] sm:px-[12%] py-12 sm:py-16 scroll-mt-20 relative select-none overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#b820e6]/5 dark:bg-[#b820e6]/3 rounded-full blur-[100px] -z-10"></div>
       
       <h4 className="text-center mb-2 text-lg font-Ovo text-gray-500 dark:text-zinc-400">What i offer</h4>
       <h2 className="text-center text-4xl sm:text-5xl font-Ovo tracking-tight">My services</h2>
-      <p className="text-center max-w-xl mx-auto mt-5 mb-16 font-Ovo text-sm sm:text-base text-gray-600 dark:text-zinc-300 leading-relaxed">
+      <p className="text-center max-w-xl mx-auto mt-3 mb-10 font-Ovo text-sm sm:text-base text-gray-600 dark:text-zinc-300 leading-relaxed">
         Delivering dynamic web and mobile architectures through professional MERN stack execution, ensuring elegant client user interfaces and solid backend operations.
       </p>
 

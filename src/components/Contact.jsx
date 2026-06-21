@@ -16,6 +16,10 @@ const Contact = () => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
+    // Dynamically set subject line to include sender's name
+    const senderName = formData.get("name") || "Anonymous";
+    formData.set("subject", `${senderName} - New form Submission`);
+
     // ----- Enter your Web3 Forms Access key below---------
 
     formData.append("access_key", "b40cc700-9d9f-4043-831c-3c9737f7d30d");
@@ -79,7 +83,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full px-[8%] sm:px-[12%] py-16 sm:py-24 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none relative overflow-hidden select-none"
+      className="w-full px-[8%] sm:px-[12%] py-12 sm:py-16 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none relative overflow-hidden select-none"
     >
       {/* Decorative background glows */}
       <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-[#b820e6]/5 dark:bg-[#b820e6]/2 rounded-full blur-[100px] -z-10 animate-pulse duration-[7000ms]"></div>
@@ -87,7 +91,7 @@ const Contact = () => {
 
       <h4 className="text-center mb-2 text-lg font-Ovo text-gray-500 dark:text-zinc-400">Connect with me</h4>
       <h2 className="text-center text-4xl sm:text-5xl font-Ovo tracking-tight">Get in touch</h2>
-      <p className="text-center max-w-xl mx-auto mt-5 mb-16 font-Ovo text-sm sm:text-base text-gray-600 dark:text-zinc-300 leading-relaxed">
+      <p className="text-center max-w-xl mx-auto mt-3 mb-10 font-Ovo text-sm sm:text-base text-gray-600 dark:text-zinc-300 leading-relaxed">
         I'd love to hear from you! If you have any projects, questions, or opportunities you'd like to discuss, feel free to drop a message.
       </p>
 
@@ -95,7 +99,7 @@ const Contact = () => {
         <input
           type="hidden"
           name="subject"
-          value="Eliana Jade - New form Submission"
+          value="New Portfolio Form Submission"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-10 mb-6">

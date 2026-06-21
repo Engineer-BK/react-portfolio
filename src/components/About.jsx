@@ -14,13 +14,13 @@ import kubernetes from "../assets/kubernetes-logo.png";
 
 const About = () => {
   return (
-    <div id="about" className="w-full px-[8%] sm:px-[12%] py-16 sm:py-24 scroll-mt-20 relative select-none overflow-hidden">
+    <div id="about" className="w-full px-[8%] sm:px-[12%] py-12 sm:py-16 scroll-mt-20 relative select-none overflow-hidden">
       {/* Ambient decorative lighting */}
       <div className="absolute top-1/4 left-0 w-80 h-80 bg-[#b820e6]/5 dark:bg-[#b820e6]/3 rounded-full blur-[100px] -z-10"></div>
       <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-[#da7d20]/5 dark:bg-[#da7d20]/3 rounded-full blur-[100px] -z-10"></div>
 
       <h4 className="text-center mb-2 text-lg font-Ovo text-gray-500 dark:text-zinc-400">Introduction</h4>
-      <h2 className="text-center text-4xl sm:text-5xl font-Ovo tracking-tight mb-16">About me</h2>
+      <h2 className="text-center text-4xl sm:text-5xl font-Ovo tracking-tight mb-10">About me</h2>
 
       <div className="flex w-full flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
         {/* Profile Image & Rotating Badge Container */}
@@ -67,7 +67,7 @@ const About = () => {
 
         {/* Biography & Dynamic Category Cards */}
         <div className="flex-1 w-full">
-          <p className="mb-12 font-Ovo leading-relaxed text-gray-700 dark:text-zinc-300 text-sm sm:text-base text-left border-l-2 border-gray-200 dark:border-zinc-800/80 pl-4 lg:pl-6 max-w-3xl">
+          <p className="mb-8 font-Ovo leading-relaxed text-gray-700 dark:text-zinc-300 text-sm sm:text-base text-left border-l-2 border-gray-200 dark:border-zinc-800/80 pl-4 lg:pl-6 max-w-3xl">
             I am a <span className="font-semibold text-gray-950 dark:text-white">Software Engineer</span> and <span className="font-semibold text-[#b820e6] dark:text-[#da7d20] font-Outfit">MERN Full-Stack Developer</span> specializing in building scalable web applications and robust backend architectures. With a strong focus on modern frontend technologies, microservices architecture, and secure databases, I design highly interactive applications that integrate messaging queues, caching layers, and containerized cloud deployments.
           </p>
 

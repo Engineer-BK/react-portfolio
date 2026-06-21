@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="mt-20 font-Outfit pb-12">
+    <footer className="mt-12 font-Outfit pb-12">
       <div className="text-center flex flex-col items-center gap-4">
         {/* Logo with hover effect */}
         <div className="transition-all duration-300 hover:scale-105 cursor-pointer">
@@ -47,7 +47,7 @@ const Footer = () => {
       </div>
 
       {/* Gradient divider line */}
-      <div className="w-10/12 mx-auto h-[1px] bg-gradient-to-r from-transparent via-gray-300 dark:via-zinc-800 to-transparent my-10"></div>
+      <div className="w-10/12 mx-auto h-[1px] bg-gradient-to-r from-transparent via-gray-300 dark:via-zinc-800 to-transparent my-6"></div>
 
       {/* Bottom section */}
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
