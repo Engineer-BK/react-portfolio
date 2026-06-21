@@ -52,7 +52,7 @@ const Footer = () => {
       {/* Bottom section */}
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <p className="text-gray-500 dark:text-zinc-400 text-sm font-Ovo text-center md:text-left">
-          © 2026 Basir Khan. All rights reserved.
+          © {new Date().getFullYear()} Basir Khan. All rights reserved.
         </p>
         
         <ul className="flex items-center gap-8 justify-center">
