@@ -39,6 +39,13 @@ const Experience = () => {
 
   const personalProjects = [
     {
+      title: "RecipeHub (AI Microservices)",
+      tech: "React 18 • Node.js Microservices • API Gateway • Groq AI • Neon Postgres • Redis • Kafka",
+      link: "https://recipe-hub-ashen-theta.vercel.app/",
+      category: "Personal",
+      bgClass: "bg-[url('./assets/recipehub.png')]"
+    },
+    {
       title: "SyncUp (AI Job Platform)",
       tech: "Next.js • Node.js • Groq AI • AWS • PostgreSQL • Redis",
       link: "https://syncup-ai-job-platform.vercel.app/",
@@ -46,25 +53,18 @@ const Experience = () => {
       bgClass: "bg-[url('./assets/syncup.png')]"
     },
     {
+      title: "The Sylheti Archive",
+      tech: "Next.js 15 • React 19 • PostgreSQL • Prisma • Redis • Tailwind",
+      link: "https://sylhetiarchivercc.org/",
+      category: "Freelance",
+      bgClass: "bg-[url('./assets/thesylhetiarchive.png')]"
+    },
+    {
       title: "Real-Time Chat App",
       tech: "React • Node.js • Microservices • Socket.IO • AWS • Docker",
       link: "https://chatfrontend-v2.vercel.app/",
       category: "Personal",
       bgClass: "bg-[url('./assets/chatapp.png')]"
-    },
-    {
-      title: "RecipeHub (React)",
-      tech: "React • Tailwind CSS • REST API • Responsive",
-      link: "https://engineer-bk.github.io/RecipeHub/",
-      category: "Personal",
-      bgClass: "bg-[url('./assets/recipehub.png')]"
-    },
-    {
-      title: "The Sylheti Archive",
-      tech: "Next.js 15 • React 19 • PostgreSQL • Prisma • Redis • Tailwind",
-      link: "https://the-siloti-archive-git-sarcc-991861-thesylotiarchives-projects.vercel.app/",
-      category: "Freelance",
-      bgClass: "bg-[url('./assets/thesylhetiarchive.png')]"
     },
     {
       title: "Admission Management",
