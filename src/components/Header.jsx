@@ -2,7 +2,7 @@ import React from "react";
 import profile_img2 from "../assets/profile-img2.png";
 import right_arrow_white from "../assets/right-arrow-white.png";
 import download_icon from "../assets/download-icon.png";
-import resume from "/Bachir_Khan_MERN_Developer_1Year_US_project_19-06-2026.pdf";
+import resume from "/Basir_Khan_MERN_Developer_1Year_US_project_23-07-2026.pdf";
 
 const Header = () => {
   return (
